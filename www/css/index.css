@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Source Sans Pro;
+}
+body:hover{
+    cursor: pointer;
+}
+
+.load{
+    animation: slide 2s;
+}
+
+.slider{
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center; */
+    width: 100%;
+    height: 80vh;
+    animation: slide 20s infinite;
+    z-index: 1;
+}
+
+
+@keyframes slide{
+    0%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img6.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    20%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img6.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+    }
+    20.01%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    40%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    40.01%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    60%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    60.01%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img4.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    80%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img4.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    80.01%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img5.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        background:linear-gradient(180deg,transparent 5%,rgb(252, 180, 113)95%), url('../images/img5.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.sidebar{
+    position: absolute;
+    width: 300px;
+    height: 80vh;
+    background: #000;
+    left: -300px;
+    transition: .4s;
+    z-index: 5;
+}
+.sidebar:hover{
+    box-shadow: 0 0 2px 2px rgb(252, 180, 113);
+}
+.sidebar.active{
+    left: 0;
+}
+.sidebar ul li{
+    list-style: none;
+    color: white;
+    padding: 20px 24px;
+}
+
+.sidebar .toggle-btn{
+    position: absolute;
+    top: 30px;
+    left: 330px;
+}
+
+.toggle-btn span{
+
+    width: 45px;
+    height: 4px;
+    background: rgb(252, 180, 113);
+    display: block;
+    margin-top: 2px;
+
+}
+
+.personal-details-box{
+    display: flex;
+    flex-direction: column;
+    margin-left:21%;
+    margin-right: 21%;
+    height: 60vh;
+    position: relative;
+    z-index: 2;
+    transition: .4s;
+    margin-top: 0;
+}
+
+.personal-details-box.active{
+    margin-top: -25rem;
+}
+.personal-details{
+    height: 90%;
+    background:#fff;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+.personal-details:hover{
+    box-shadow: 0 0 2px 2px rgb(252, 180, 113);
+}
+.profile-picture{
+    width: 35%;
+}
+.profile-picture img{
+    height: 100%;
+    width: 100%;
+}
+.personal-details-footer{
+    background: rgb(252, 180, 113);
+    height: 10%;
+    width: 100%;
+}
+.personal-info{
+    text-align: left;
+    width: 75%;
+    padding-left: 4rem;
+
+}
+.personal-info-span{
+    width: 4rem;
+    height: 2rem;
+    background: rgb(252, 180, 113);
+    border: none;
+    padding: 3px;
+    color: #fff;
+}
+.personal-info p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 1.5rem;
+}
+
+.myCV{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background:white;
+    height: 100%;
+    font-family: Source Sans Pro;
+}
+.myCV .education{
+    height: 32%;
+}
+.myCV .work-experience{
+    height: 32%;
+}
+.myCV .skills{
+    height: 32%;
+}
+
+@media screen and (max-width:767px){
+    .personal-details-box{
+        
+        margin-left:5%;
+        margin-right: 5%;
+        height: 70vh;
+        
+    }
+    .personal-details{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+    .profile-picture {
+        height: 30vh;
+        width: 100%;
+    }
+    .personal-info{
+        text-align: left;
+        width: 100%;
+        padding:.8rem;
+    
+    }
+    .personal-info p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 5px;
+        font-size: 15px;;
+    }
+    .personal-info-span{
+        width: 4rem;
+        height:2rem;
+        background: rgb(252, 180, 113);
+        border: none;
+        position: relative;
+        top: 3px;
+        font-size: 15px;
+    }
+    .sidebar .toggle-btn{
+        position: absolute;
+        top: 30px;
+        left: 309px;
+    }
+    
+    
+}
+
+.app-android .app-topbar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+
+}
+/* .app-android .app-topbar .app-title{
+    width: 5rem;
+    font-size: 15px;
+    margin: 0;
+    padding: 2px 5px 2px 5px; */
+/* } */
+#app-sections{
+    width: 3.2rem;
+    background:none;
+    border: none;
+    margin: 0 0 0 5px;
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(252, 180, 113);
+    
+    
+}
+#app-sections .app-button{
+    width: 6rem;
+    padding: 0;
+    position: relative;
+    height: inherit;
+
+}
+#about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0 2rem 0;
+}
+#about-me .about-me-details{
+    width: 80%;
+    box-shadow: 0 0 2px 2px rgb(199, 197, 197);
+    border-radius: 2px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+#about-me .about-me-details:hover{
+    box-shadow: 0 0 4px 4px rgb(199, 197, 197);
+}
+
